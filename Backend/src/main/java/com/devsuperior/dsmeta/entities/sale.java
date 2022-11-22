@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_sales")
-public class sale {
+public class Sale {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,9 +20,8 @@ public class sale {
 	private Integer deals;
 	private Double amount;
 	private LocalDate date;
-	
-	public sale() {
-		
+
+	public Sale(){		
 	}
 
 	public Long getId() {
@@ -61,8 +60,8 @@ public class sale {
 		return amount;
 	}
 
-	public void setAmout(Double amount){
-		this.amount= amount;
+	public void setAmount(Double amount) {
+		this.amount = amount;
 	}
 
 	public LocalDate getDate() {
@@ -71,5 +70,6 @@ public class sale {
 
 	public void setDate(LocalDate date) {
 		this.date = date;
-	}
+	}	
+	
 }
